@@ -18,7 +18,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App" >
       <Cabecera cantProd= {cantP}/>
       <Listado sumar={sumar}/>
     </div>

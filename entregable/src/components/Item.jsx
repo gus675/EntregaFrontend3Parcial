@@ -9,13 +9,13 @@
 //    button       (este boton debe permitir comprar, pero si la cantidad es menor a 0 debe estar deshabilitado y decir "Sin stock")
 
 import React, {useState} from "react"
-import stylesBot from './stylesBot.module.css'
+import stylesB from './BotonSt/styles.module.css'
 
 const styleCanProd = {
   padding :'0px 20px 0px 20px',
   color: "black",
   fontSize: "14px",
-  backgroundColor: "#6cd280"
+  backgroundColor: "#32e456"
 }
 
 const cambiarSpan=(value)=>{
@@ -27,7 +27,6 @@ const cambiarSpan=(value)=>{
 export default function Item({nombre, descripcion, stock, id, sumar}) {
 
   const [valor, setValor]= useState(stock)
-
   const styles= cambiarSpan(valor)
 
   const restar = () => {
@@ -38,12 +37,19 @@ export default function Item({nombre, descripcion, stock, id, sumar}) {
   }
 
   return (
-    <div  className='producto' style={{backgroundColor: "#fffafa"}}>
-      <h3 key={id}> { nombre } </h3><hr/>
-      <p> { descripcion } </p>
-      
-      <h5>En stock:  <span style= {styles} > { valor?   valor   : "Agotado"}   </span>  </h5>
-      <button onClick = { restar } className={stylesBot['boton']}> { valor?  "COMPRAR"  : "SIN STOCK"  } </button>
+    <div  className='producto'
+      style={
+        {backgroundColor: "#fffafa",
+        webkitBoxShadow: "5px 5px 15px 5px rgba(0,0,0,0.32)",
+        boxShadow: "5px 5px 15px 5px rgba(0,0,0,0.32)",
+        padding: "35px"}
+        }>
+          <h3 key={id}> { nombre } </h3><hr/>
+          <p> { descripcion } </p>
+          <h5>En stock:  <span style= {styles} > { valor?   valor   : "Agotado"}   </span>  </h5>
+          <button className={ stylesB['boton']} onClick = { restar } >
+            { valor?  "COMPRAR"  : "SIN STOCK"  }
+          </button>
     </div>
   )
 } 

@@ -7,7 +7,7 @@
 //    p > span     (el span mostrará la cantidad recibida por props)*/
 
 import React from 'react'
-import styles from "./stylesCab.module.css";
+import styles from "./CabeceraSt/styles.module.css";
 
 export default function Cabecera({cantProd}) {
   
