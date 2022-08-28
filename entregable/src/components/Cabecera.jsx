@@ -7,15 +7,16 @@
 //    p > span     (el span mostrará la cantidad recibida por props)*/
 
 import React from 'react'
+import styles from "./stylesCab.module.css";
 
 export default function Cabecera({cantProd}) {
   
     return (
-      <header>
+      <header className={styles['cabecera']}>
           {
             <div>
                 <h1>Carrito de compras</h1>
-                <p>Cantidad de productos vendidos <span>{cantProd}</span></p>
+                <p>Cantidad de productos <span style={{padding:"0px 20px 0px 20px"}}>{cantProd}</span></p>
             </div>
           }
       </header>

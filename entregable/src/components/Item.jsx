@@ -9,11 +9,13 @@
 //    button       (este boton debe permitir comprar, pero si la cantidad es menor a 0 debe estar deshabilitado y decir "Sin stock")
 
 import React, {useState} from "react"
+import stylesBot from './stylesBot.module.css'
 
 const styleCanProd = {
+  padding :'0px 20px 0px 20px',
   color: "black",
-  fontWeight: "bolder",
-  backgroundColor: "white"
+  fontSize: "14px",
+  backgroundColor: "#6cd280"
 }
 
 const cambiarSpan=(value)=>{
@@ -36,11 +38,12 @@ export default function Item({nombre, descripcion, stock, id, sumar}) {
   }
 
   return (
-    <div className='producto'>
-      <h3 key={id}> { nombre } </h3>
+    <div  className='producto' style={{backgroundColor: "#fffafa"}}>
+      <h3 key={id}> { nombre } </h3><hr/>
       <p> { descripcion } </p>
+      
       <h5>En stock:  <span style= {styles} > { valor?   valor   : "Agotado"}   </span>  </h5>
-      <button onClick = { restar } > { valor?  "COMPRAR"  : "SIN STOCK"  } </button>
+      <button onClick = { restar } className={stylesBot['boton']}> { valor?  "COMPRAR"  : "SIN STOCK"  } </button>
     </div>
   )
 } 
