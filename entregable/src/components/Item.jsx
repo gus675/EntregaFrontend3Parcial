@@ -32,7 +32,7 @@ export default function Item({nombre, descripcion, stock, id, img, sumar}) {
         padding: "20px"}
         }>
           <img src={img}  alt= "Zapas"/>
-          <h3 key={id}> { nombre } </h3><hr/>
+          <h3 key={id}> { nombre } </h3>
           <p> { descripcion } </p>
           <h5>En stock:  <span style= {styles} > { valor?   valor   : "Agotado"}   </span>  </h5>
           <button className={ styless['boton']} onClick = { restar } >

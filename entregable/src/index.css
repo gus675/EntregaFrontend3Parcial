@@ -41,6 +41,7 @@ header p span {
   width: 33%;
   border-radius: 5px;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
