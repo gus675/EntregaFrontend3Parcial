@@ -9,8 +9,7 @@
 //    button       (este boton debe permitir comprar, pero si la cantidad es menor a 0 debe estar deshabilitado y decir "Sin stock")
 
 import React, {useState} from "react"
-import stylesb from './BotonSt/styles.module.css'
-import stylesz from './ImagenSt/styles.module.css'
+import styless from './BotonSt/styles.module.css'
 
 export default function Item({nombre, descripcion, stock, id, img, sumar}) {
 
@@ -32,11 +31,11 @@ export default function Item({nombre, descripcion, stock, id, img, sumar}) {
         boxShadow: "5px 5px 15px 5px rgba(0,0,0,0.32)",
         padding: "20px"}
         }>
-          <img src={img}  alt= "Zapas" className={ stylesz['imagen']}/>
+          <img src={img}  alt= "Zapas"/>
           <h3 key={id}> { nombre } </h3><hr/>
           <p> { descripcion } </p>
           <h5>En stock:  <span style= {styles} > { valor?   valor   : "Agotado"}   </span>  </h5>
-          <button className={ stylesb['boton']} onClick = { restar } >
+          <button className={ styless['boton']} onClick = { restar } >
             { valor?  "COMPRAR"  : "SIN STOCK"  }
           </button>
     </div>
