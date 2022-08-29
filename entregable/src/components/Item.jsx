@@ -27,8 +27,8 @@ export default function Item({nombre, descripcion, stock, id, img, sumar}) {
     <div  className='producto'
       style={
         {backgroundColor: "#fffafa",
-        webkitBoxShadow: "5px 5px 15px 5px rgba(0,0,0,0.32)",
-        boxShadow: "5px 5px 15px 5px rgba(0,0,0,0.32)",
+        webkitBoxShadow: "5px 5px 15px 5px rgba(0,0,0,0.3)",
+        boxShadow: "5px 5px 15px 5px rgba(0,0,0,0.4)",
         padding: "20px"}
         }>
           <img src={img}  alt= "Zapas"/>
