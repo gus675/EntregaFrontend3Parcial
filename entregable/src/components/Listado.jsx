@@ -16,7 +16,7 @@ export default function Listado({sumar}) {
     <div className='container'>
       {
         data.map((data) => <Item key={data.id} 
-        nombre={data.producto.nombre} descripcion={data.producto.descripcion} stock={data.stock} sumar ={sumar} />  
+        nombre={data.producto.nombre} descripcion={data.producto.descripcion} stock={data.stock} img={data.producto.img} sumar ={sumar} />  
         )
       }
     </div>

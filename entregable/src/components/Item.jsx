@@ -9,22 +9,10 @@
 //    button       (este boton debe permitir comprar, pero si la cantidad es menor a 0 debe estar deshabilitado y decir "Sin stock")
 
 import React, {useState} from "react"
-import stylesB from './BotonSt/styles.module.css'
+import stylesb from './BotonSt/styles.module.css'
+import stylesz from './ImagenSt/styles.module.css'
 
-const styleCanProd = {
-  padding :'0px 20px 0px 20px',
-  color: "black",
-  fontSize: "14px",
-  backgroundColor: "#32e456"
-}
-
-const cambiarSpan=(value)=>{
-  if (value >0) {
-    return styleCanProd          
-  }
-}
-
-export default function Item({nombre, descripcion, stock, id, sumar}) {
+export default function Item({nombre, descripcion, stock, id, img, sumar}) {
 
   const [valor, setValor]= useState(stock)
   const styles= cambiarSpan(valor)
@@ -42,14 +30,28 @@ export default function Item({nombre, descripcion, stock, id, sumar}) {
         {backgroundColor: "#fffafa",
         webkitBoxShadow: "5px 5px 15px 5px rgba(0,0,0,0.32)",
         boxShadow: "5px 5px 15px 5px rgba(0,0,0,0.32)",
-        padding: "35px"}
+        padding: "20px"}
         }>
+          <img src={img}  alt= "Zapas" className={ stylesz['imagen']}/>
           <h3 key={id}> { nombre } </h3><hr/>
           <p> { descripcion } </p>
           <h5>En stock:  <span style= {styles} > { valor?   valor   : "Agotado"}   </span>  </h5>
-          <button className={ stylesB['boton']} onClick = { restar } >
+          <button className={ stylesb['boton']} onClick = { restar } >
             { valor?  "COMPRAR"  : "SIN STOCK"  }
           </button>
     </div>
   )
-} 
+}
+
+const styleCanProd = {
+  padding :'0px 20px 0px 20px',
+  color: "black",
+  fontSize: "14px",
+  backgroundColor: "#32e456"
+}
+
+const cambiarSpan=(value)=>{
+  if (value >0) {
+    return styleCanProd          
+  }
+}
