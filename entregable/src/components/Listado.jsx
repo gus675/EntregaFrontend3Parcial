@@ -1,4 +1,3 @@
-
 // Debemos importar el listado de objetos del archivo JSON para usarlos como array a la hora de crear cada Item.
 // El componente Listado es el padre de:
 // - varios Item
