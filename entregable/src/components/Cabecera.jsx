@@ -16,7 +16,8 @@ export default function Cabecera({cantProd}) {
           {
             <div>
                 <h1>Carrito de compras</h1>
-                <p>Cantidad de productos <span style={{padding:"0px 20px 0px 20px"}}>{cantProd}</span></p>
+                <p>Cantidad de productos <span style={{padding:"0px 20px 0px 20px"}}>{cantProd}</span>
+                </p>
             </div>
           }
       </header>

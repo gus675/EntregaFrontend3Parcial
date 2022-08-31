@@ -1,9 +1,8 @@
 .boton {
     background-color: rgb(50,130,250);
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 17px;
     cursor: pointer;
     width: 80%;
-    color: rgb(255,255,255);
     border: none;
 }
